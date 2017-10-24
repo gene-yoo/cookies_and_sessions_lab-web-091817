@@ -9,11 +9,11 @@
 <%= submit_tag "add to cart" %>
 <% end %>
 
-<p>Cart Items</p>
-<ul>
-  <% if !(session[:cart].nil?) %>
-    <% session[:cart].each do |item| %>
-    <li><%= item %></li>
-    <% end %>
-  <% end %>
-</ul>
+<% if !(session[:cart].nil?) %>
+  <p>Cart Items</p>
+  <ul>
+      <% session[:cart].each do |item| %>
+      <li><%= item %></li>
+      <% end %>
+  </ul>
+<% end %>
